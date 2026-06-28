@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hair Salon Luana | ハワイアンスピリットのヘアサロン</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav__inner">
+      <a class="nav__logo" href="#hero">Luana</a>
+      <ul class="nav__links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#access">Access</a></li>
+        <li><a href="#contact" class="btn btn--nav">予約する</a></li>
+      </ul>
+      <button class="nav__hamburger" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <p class="hero__sub">HAIR SALON</p>
+      <h1 class="hero__title">Luana</h1>
+      <p class="hero__tagline">ハワイ語で「リラックスする」<br>心も髪も、解き放たれる時間を。</p>
+      <a href="#contact" class="btn btn--primary">ご予約はこちら</a>
+    </div>
+    <div class="hero__wave">
+      <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#ffffff"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="section about" id="about">
+    <div class="container">
+      <span class="section__label">About</span>
+      <h2 class="section__title">ようこそ、Luanaへ</h2>
+      <div class="about__grid">
+        <div class="about__text">
+          <p>Hair Salon Luanaは、ハワイ語で「リラックスする」を意味する名を冠したヘアサロンです。</p>
+          <p>施術中はもちろん、来店の瞬間から帰るまで、心からくつろいでいただける空間づくりを大切にしています。</p>
+          <p>一人ひとりのライフスタイルや骨格に合わせたデザインで、あなたの魅力を最大限に引き出します。</p>
+        </div>
+        <div class="about__values">
+          <div class="value-card">
+            <div class="value-card__icon">🌺</div>
+            <h3>Relax</h3>
+            <p>ハワイの穏やかな空気感をイメージした、リラックスできる空間</p>
+          </div>
+          <div class="value-card">
+            <div class="value-card__icon">✂️</div>
+            <h3>Skill</h3>
+            <p>経験豊富なスタイリストによる、丁寧で確かな技術</p>
+          </div>
+          <div class="value-card">
+            <div class="value-card__icon">💛</div>
+            <h3>Care</h3>
+            <p>髪と頭皮を労わる厳選されたオーガニックケア用品</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="section services" id="services">
+    <div class="container">
+      <span class="section__label">Services</span>
+      <h2 class="section__title">メニュー</h2>
+      <div class="services__grid">
+        <div class="service-card">
+          <div class="service-card__img service-card__img--cut"></div>
+          <div class="service-card__body">
+            <h3>カット</h3>
+            <p>骨格・髪質・ライフスタイルに合わせたオーダーメイドスタイル。</p>
+            <p class="service-card__price">¥5,500〜</p>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-card__img service-card__img--color"></div>
+          <div class="service-card__body">
+            <h3>カラー</h3>
+            <p>髪に優しい低ダメージカラーで、あなただけの色を表現。</p>
+            <p class="service-card__price">¥8,800〜</p>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-card__img service-card__img--perm"></div>
+          <div class="service-card__body">
+            <h3>パーマ</h3>
+            <p>ナチュラルウェーブからしっかりカールまで幅広く対応。</p>
+            <p class="service-card__price">¥11,000〜</p>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-card__img service-card__img--treatment"></div>
+          <div class="service-card__body">
+            <h3>トリートメント</h3>
+            <p>ダメージを補修し、ツヤと潤いを取り戻すケアメニュー。</p>
+            <p class="service-card__price">¥4,400〜</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="section gallery" id="gallery">
+    <div class="container">
+      <span class="section__label">Gallery</span>
+      <h2 class="section__title">スタイルギャラリー</h2>
+      <div class="gallery__grid">
+        <div class="gallery__item gallery__item--1"></div>
+        <div class="gallery__item gallery__item--2"></div>
+        <div class="gallery__item gallery__item--3"></div>
+        <div class="gallery__item gallery__item--4"></div>
+        <div class="gallery__item gallery__item--5"></div>
+        <div class="gallery__item gallery__item--6"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Access -->
+  <section class="section access" id="access">
+    <div class="container">
+      <span class="section__label">Access</span>
+      <h2 class="section__title">アクセス</h2>
+      <div class="access__grid">
+        <div class="access__info">
+          <table class="access__table">
+            <tr>
+              <th>住所</th>
+              <td>〒000-0000<br>東京都○○区○○町1-2-3</td>
+            </tr>
+            <tr>
+              <th>最寄駅</th>
+              <td>○○線「○○駅」徒歩5分</td>
+            </tr>
+            <tr>
+              <th>営業時間</th>
+              <td>
+                平日 10:00〜20:00<br>
+                土日祝 9:00〜19:00
+              </td>
+            </tr>
+            <tr>
+              <th>定休日</th>
+              <td>毎週火曜日</td>
+            </tr>
+            <tr>
+              <th>電話</th>
+              <td><a href="tel:00-0000-0000">00-0000-0000</a></td>
+            </tr>
+          </table>
+        </div>
+        <div class="access__map">
+          <div class="map-placeholder">
+            <span>📍 Google マップはこちら</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <span class="section__label">Contact</span>
+      <h2 class="section__title">ご予約・お問い合わせ</h2>
+      <form class="contact__form" onsubmit="handleSubmit(event)">
+        <div class="form-group">
+          <label for="name">お名前 <span class="required">*</span></label>
+          <input type="text" id="name" name="name" placeholder="山田 花子" required />
+        </div>
+        <div class="form-group">
+          <label for="email">メールアドレス <span class="required">*</span></label>
+          <input type="email" id="email" name="email" placeholder="example@email.com" required />
+        </div>
+        <div class="form-group">
+          <label for="menu">ご希望のメニュー</label>
+          <select id="menu" name="menu">
+            <option value="">選択してください</option>
+            <option value="cut">カット</option>
+            <option value="color">カラー</option>
+            <option value="perm">パーマ</option>
+            <option value="treatment">トリートメント</option>
+            <option value="other">その他・複数</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="date">ご希望日時</label>
+          <input type="datetime-local" id="date" name="date" />
+        </div>
+        <div class="form-group">
+          <label for="message">ご要望・ご質問</label>
+          <textarea id="message" name="message" rows="4" placeholder="ご自由にお書きください"></textarea>
+        </div>
+        <button type="submit" class="btn btn--primary btn--full">送信する</button>
+        <p id="form-success" class="form-success" hidden>ありがとうございます！確認後、ご連絡いたします。</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p class="footer__logo">Luana</p>
+      <p class="footer__copy">© 2026 Hair Salon Luana. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
