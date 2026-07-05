@@ -1,228 +1,572 @@
 <!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hair Salon Luana | ハワイアンスピリットのヘアサロン</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+
+<html class="scroll-smooth" lang="ja"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Luana | High-End Hair Salon</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&amp;family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed-dim": "#c8c8b0",
+                        "surface-container-high": "#e9e8e5",
+                        "tertiary": "#352100",
+                        "tertiary-container": "#513500",
+                        "secondary-container": "#e1e1c9",
+                        "on-primary-fixed": "#001d36",
+                        "inverse-surface": "#2f312f",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-fixed": "#281800",
+                        "surface-container": "#efeeeb",
+                        "muted-gold": "#C5A059",
+                        "warm-white": "#FFFFFF",
+                        "surface-container-low": "#f4f3f1",
+                        "secondary-fixed": "#e4e4cc",
+                        "error": "#ba1a1a",
+                        "primary": "#002645",
+                        "on-background": "#1a1c1a",
+                        "on-primary-fixed-variant": "#28496b",
+                        "on-secondary": "#ffffff",
+                        "on-surface-variant": "#43474e",
+                        "on-error-container": "#93000a",
+                        "surface-variant": "#e3e2e0",
+                        "on-primary-container": "#87a7ce",
+                        "surface-dim": "#dbdad7",
+                        "outline": "#73777f",
+                        "secondary": "#5e604d",
+                        "primary-container": "#1a3c5e",
+                        "inverse-primary": "#a9c9f2",
+                        "surface": "#faf9f6",
+                        "on-tertiary-fixed-variant": "#5f410b",
+                        "on-tertiary": "#ffffff",
+                        "surface-bright": "#faf9f6",
+                        "on-tertiary-container": "#c79e60",
+                        "deep-ocean": "#1A3C5E",
+                        "on-secondary-container": "#636451",
+                        "on-primary": "#ffffff",
+                        "background": "#faf9f6",
+                        "tertiary-fixed": "#ffddb0",
+                        "on-secondary-fixed": "#1b1d0e",
+                        "surface-tint": "#416084",
+                        "surface-container-lowest": "#ffffff",
+                        "on-surface": "#1a1c1a",
+                        "on-error": "#ffffff",
+                        "on-secondary-fixed-variant": "#474836",
+                        "primary-fixed-dim": "#a9c9f2",
+                        "tertiary-fixed-dim": "#ecbf7e",
+                        "inverse-on-surface": "#f2f1ee",
+                        "outline-variant": "#c3c6cf",
+                        "primary-fixed": "#d1e4ff",
+                        "surface-container-highest": "#e3e2e0",
+                        "soft-sand": "#F5F5DC"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "container-max-width": "1200px",
+                        "margin-desktop": "64px",
+                        "margin-mobile": "16px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Libre Caslon Text"],
+                        "headline-lg-mobile": ["Libre Caslon Text"],
+                        "label-md": ["Inter"],
+                        "headline-lg": ["Libre Caslon Text"],
+                        "display-lg": ["Libre Caslon Text"],
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "400"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "400"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .hero-gradient {
+            background: linear-gradient(to bottom, rgba(0, 38, 69, 0.4), rgba(0, 38, 69, 0.1));
+        }
+        .masonry {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-auto-rows: 200px;
+            gap: 24px;
+        }
+        .masonry-item:nth-child(2n) { grid-row: span 2; }
+        .masonry-item:nth-child(3n) { grid-row: span 1; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
 </head>
-<body>
+<body class="bg-surface text-on-surface font-body-md antialiased overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-surface/80 backdrop-blur-md shadow-sm dark:shadow-none transition-all duration-300">
+<div class="max-w-[1200px] mx-auto flex items-center justify-between px-margin-desktop py-4">
+<div class="flex items-center gap-3 cursor-pointer active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 0;">spa</span>
+<span class="font-headline-lg text-headline-lg text-primary dark:text-inverse-primary tracking-tight">Luana</span>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-colors duration-300" href="#about">About</a>
+<a class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-colors duration-300" href="#services">Services</a>
+<a class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-colors duration-300" href="#gallery">Gallery</a>
+<a class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-colors duration-300" href="#access">Access</a>
+<a class="bg-primary text-warm-white px-6 py-2 rounded-full font-label-md text-label-md hover:bg-primary-container transition-all active:scale-95" href="#contact">Book Now</a>
+</nav>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center scale-105 animate-[pulse_10s_ease-in-out_infinite]" data-alt="A cinematic, high-end photography shot of a luxury hair salon interior with soft, natural light streaming through large windows. The space features minimalist white furniture, soft sand-colored accents, and lush tropical greenery in minimalist ceramic pots. The atmosphere is serene and expensive, reflecting a high-end coastal retreat aesthetic with a shallow depth of field." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA9se3hD0SBaJMXhwzyb4SA3l9lwwPmqzH6dKRZrB4u8jSHSqRkW-nta4Ndk6qzDXuWiFxffNpOEOzdzh_yalUEneB5KMEDErUQHlYajOMwrUWc1GTL4HVHR47POyYUc-HQP-gc2uWTiHKDfke78qJmrnv1crc1X1aynlR2qAfP_njwcVrNAroAD-ul5r3jOKe2KbFH3JdnLCFrmQtLblJiSpcCbMpZHwQnt-p4c6Hp4IDR1QHvRSt31Q')"></div>
+<div class="absolute inset-0 hero-gradient"></div>
+</div>
+<div class="relative z-10 text-center px-margin-mobile">
+<p class="text-warm-white font-label-md tracking-[0.3em] uppercase mb-4 opacity-90">Hair Salon</p>
+<h1 class="font-display-lg text-display-lg text-warm-white mb-6 drop-shadow-lg">Luana</h1>
+<p class="font-headline-md text-headline-md text-warm-white mb-10 max-w-xl mx-auto leading-relaxed">
+                ハワイ語で「リラックスする」<br/>心も髪も、解き放たれる時間を。
+            </p>
+<a class="inline-flex items-center gap-3 bg-warm-white text-primary px-10 py-5 rounded-full font-label-md text-label-md shadow-xl hover:bg-soft-sand transition-all transform hover:-translate-y-1 active:scale-95" href="#contact">
+                ご予約はこちら
+                <span class="material-symbols-outlined text-xl">calendar_today</span>
+</a>
+</div>
+<!-- Floating Scroll Indicator -->
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-warm-white/60">
+<span class="text-[10px] tracking-widest uppercase">Scroll</span>
+<div class="w-[1px] h-12 bg-gradient-to-b from-warm-white/60 to-transparent"></div>
+</div>
+</section>
+<!-- About Section -->
+<section class="py-24 md:py-32 bg-surface" id="about">
+<div class="max-w-[1200px] mx-auto px-margin-desktop">
+<div class="grid md:grid-cols-2 gap-16 items-center">
+<div class="order-2 md:order-1">
+<span class="text-muted-gold font-label-md uppercase tracking-widest mb-4 block">About</span>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-8">ようこそ、Luanaへ</h2>
+<div class="space-y-6 text-on-surface-variant font-body-lg text-body-lg">
+<p>Hair Salon Luanaは、ハワイ語で「リラックスする」を意味する名を冠したヘアサロンです。</p>
+<p>施術中はもちろん、来店の瞬間から帰るまで、心からくつろいでいただける空間づくりを大切にしています。</p>
+<p>一人ひとりのライフスタイルや骨格に合わせたデザインで、あなたの魅力を最大限に引き出します。</p>
+</div>
+<div class="mt-12 space-y-8">
+<div class="flex gap-6 group">
+<div class="w-14 h-14 shrink-0 bg-soft-sand rounded-2xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-warm-white transition-colors duration-300">
+<span class="material-symbols-outlined text-3xl">spa</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-primary mb-1">Relax</h3>
+<p class="text-on-surface-variant">ハワイの穏やかな空気感をイメージした、リラックスできる空間</p>
+</div>
+</div>
+<div class="flex gap-6 group">
+<div class="w-14 h-14 shrink-0 bg-soft-sand rounded-2xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-warm-white transition-colors duration-300">
+<span class="material-symbols-outlined text-3xl">content_cut</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-primary mb-1">Skill</h3>
+<p class="text-on-surface-variant">経験豊富なスタイリストによる、丁寧で確かな技術</p>
+</div>
+</div>
+<div class="flex gap-6 group">
+<div class="w-14 h-14 shrink-0 bg-soft-sand rounded-2xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-warm-white transition-colors duration-300">
+<span class="material-symbols-outlined text-3xl">favorite</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-primary mb-1">Care</h3>
+<p class="text-on-surface-variant">髪と頭皮を労わる厳選されたオーガニックケア用品</p>
+</div>
+</div>
+</div>
+</div>
+<div class="order-1 md:order-2 relative">
+<div class="aspect-[4/5] rounded-[40px] overflow-hidden shadow-2xl transform rotate-2">
+<img alt="High-end, aesthetic photo of a tropical Hawaiian resort spa or salon interior. Soft sunlight filtering through palm leaves, natural wood textures, white linen, and a glimpse of the turquoise ocean in the background." class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhcPlbzv-y8sIYhEV6i_1RpXdv_KvqtFJ8ulYzNakDVUbpTvdlvbMr9tumybwic-lbpWoEODsUILxZdt2QrbQVGGF7Ko8t0_f8oQeMPFnS8XkNx3f4bcOOwa8vcfHMtPZ9x55TVKrD47beM_diPLJLgu3QWLiWT_Caxz0xbTC2kv87yedyxk-rB9GMRA_EEY7qCQnUF9_Gb4Hz1x3QliugU9JT14DabsDabg7RAeCaJIT8unf8PJpeNw"/>
+</div>
+<div class="absolute -bottom-8 -left-8 w-48 h-48 bg-soft-sand rounded-3xl -z-10 transform -rotate-6"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-24 md:py-32 bg-surface-container-low" id="services">
+<div class="max-w-[1200px] mx-auto px-margin-desktop">
+<div class="text-center mb-16">
+<span class="text-muted-gold font-label-md uppercase tracking-widest mb-4 block">Services</span>
+<h2 class="font-headline-lg text-headline-lg text-primary">メニュー</h2>
+<div class="w-24 h-[1px] bg-primary/20 mx-auto mt-6"></div>
+</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Service Card 1 -->
+<div class="bg-surface rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-primary/5 group">
+<h3 class="font-headline-md text-headline-md text-primary mb-4 group-hover:text-muted-gold transition-colors">カット</h3>
+<p class="text-on-surface-variant font-body-md text-body-md mb-8 min-h-[72px]">骨格・髪質・ライフスタイルに合わせたオーダーメイドスタイル。</p>
+<div class="flex items-center justify-between mt-auto">
+<span class="bg-soft-sand px-3 py-1 rounded-full text-xs font-bold text-primary tracking-wider">HAIR</span>
+<span class="font-bold text-primary text-xl">¥5,500〜</span>
+</div>
+</div>
+<!-- Service Card 2 -->
+<div class="bg-surface rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-primary/5 group">
+<h3 class="font-headline-md text-headline-md text-primary mb-4 group-hover:text-muted-gold transition-colors">カラー</h3>
+<p class="text-on-surface-variant font-body-md text-body-md mb-8 min-h-[72px]">髪に優しい低ダメージカラーで、あなただけの色を表現。</p>
+<div class="flex items-center justify-between mt-auto">
+<span class="bg-soft-sand px-3 py-1 rounded-full text-xs font-bold text-primary tracking-wider">COLOR</span>
+<span class="font-bold text-primary text-xl">¥8,800〜</span>
+</div>
+</div>
+<!-- Service Card 3 -->
+<div class="bg-surface rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-primary/5 group">
+<h3 class="font-headline-md text-headline-md text-primary mb-4 group-hover:text-muted-gold transition-colors">パーマ</h3>
+<p class="text-on-surface-variant font-body-md text-body-md mb-8 min-h-[72px]">ナチュラルウェーブからしっかりカールまで幅広く対応。</p>
+<div class="flex items-center justify-between mt-auto">
+<span class="bg-soft-sand px-3 py-1 rounded-full text-xs font-bold text-primary tracking-wider">STYLE</span>
+<span class="font-bold text-primary text-xl">¥11,000〜</span>
+</div>
+</div>
+<!-- Service Card 4 -->
+<div class="bg-surface rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-primary/5 group">
+<h3 class="font-headline-md text-headline-md text-primary mb-4 group-hover:text-muted-gold transition-colors">トリートメント</h3>
+<p class="text-on-surface-variant font-body-md text-body-md mb-8 min-h-[72px]">ダメージを補修し、ツヤと潤いを取り戻すケアメニュー。</p>
+<div class="flex items-center justify-between mt-auto">
+<span class="bg-soft-sand px-3 py-1 rounded-full text-xs font-bold text-primary tracking-wider">CARE</span>
+<span class="font-bold text-primary text-xl">¥4,400〜</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Gallery Section -->
+<section class="py-24 md:py-32 bg-surface overflow-hidden" id="gallery">
+<div class="max-w-[1200px] mx-auto px-margin-desktop">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+<div>
+<span class="text-muted-gold font-label-md uppercase tracking-widest mb-4 block">Gallery</span>
+<h2 class="font-headline-lg text-headline-lg text-primary">スタイルギャラリー</h2>
+</div>
+<p class="text-on-surface-variant max-w-sm">最新のトレンドと、お客様一人ひとりに合わせたスタイル提案の記録。</p>
+</div>
+<div class="masonry">
+<div class="masonry-item relative overflow-hidden rounded-3xl group cursor-pointer">
+<img alt="Professional hairstyle photo of a woman with beachy waves hair, sun-kissed highlights, wearing a simple white linen top. Background shows a blurred tropical garden with Hibiscus flowers." class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrF3GzW0maE6EkHIg1IQfHmzTVXA7lbrTILSj76yRKv92Y3jwAKRnL1sMNvgX_lks6ZeD7OCXt4RpdHO-aQYx7qm4Lv_nBmJe1HEKpV_UydJSUAREgtpXVhJzADrCrVIgMX6Lmk26elKpYMNTWPKeyqbgdRLeBvBa0WE6kqSPqAxeGNrjCZIDKcwEn3T2XLkq0w8JRBm0SaxcgGiqlV75YE0deF5ZQeQ2t2hQjQY_Nlk5W7CvDiejkuA"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-warm-white text-4xl">zoom_in</span>
+</div>
+</div>
+<div class="masonry-item relative overflow-hidden rounded-3xl group cursor-pointer">
+<img alt="Close-up of a beautiful hair arrangement with a small Plumeria flower tucked behind the ear. Soft, natural brown hair color. Bright, airy, tropical vibe." class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxCkdzVXp7V3cGu7w0buDwQssSbhxQdYHWN6lLhQbKIXfnlTBsrtmyRIOFtNsnvcv13LZOCdWTjEHr_eRBnZ79w95hFkZ52e6TCcq-j6-u6e49aTxwggMiY_UAChmtxjZJniKZqj-V4DU2CjXjQZQSVD_xn9BC98M9paPe2NjCg9sjUAUDFTyS2jUvQRKOV84UUuzJhGatSK6fEaJonqpH8wk1JvNFD_Zdpw8J9bwBIvYBUyzaXoYESA"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-warm-white text-4xl">zoom_in</span>
+</div>
+</div>
+<div class="masonry-item relative overflow-hidden rounded-3xl group cursor-pointer">
+<img alt="A stylish person with a relaxed, ocean-breeze inspired haircut, walking on a Hawaiian beach at sunset." class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6mpuQRO8GghxI3yygcNma2gLNPKGA7JhWUpPMOXsNlbf17NQHB730pDHbRTt_MEfVzlNnB3Kg9YdtzZwTDZrerL0iAU7DZaHejuAu0Gu0r3qX4VTE8NGu2xeEpc8kE2S6z_WwOLs6Z3w4Om8xoCYQVG0ETCpipQkxUb5qQtCC7oRktaIvuCw5t0QAh9kFs2L47rjIQGEQRrFvQkC-w_onlhOhHtgtLk3_tCiM0vvgrvBr-sOE5TD1dw"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-warm-white text-4xl">zoom_in</span>
+</div>
+</div>
+<div class="masonry-item relative overflow-hidden rounded-3xl group cursor-pointer">
+<img alt="Wide-angle shot of a bright, modern hair salon with large windows overlooking palm trees. The interior has wicker furniture and light teal accents." class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlBoISB3Y10zAQnDl3BA92MimTyAaur39T1Y3DKXH3GugoDbkRFnKjYfg-JB3fCG-y8FhG73gQQtbfS8lmTZgcjlzGf2H_TOq_XJ5HkSEVrculg7hMwrcOvKDpXg4SpQonqJV7ygY86zfxmii9mo5K8XwtNhhdJeAhOCMZxRkDQJrFFTa1eb1VRuyddgXVWdERba5178njlcSowRLna_c357cqrLaVpUIAOnpCJe6kENwATxnHQwXMAw"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-warm-white text-4xl">zoom_in</span>
+</div>
+</div>
+<div class="masonry-item relative overflow-hidden rounded-3xl group cursor-pointer">
+<img alt="Hair styling product on a wooden table next to a sea shell and a tropical leaf. Clean, professional salon aesthetic with a Hawaiian touch." class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzFnbmIhiiEtcCTQbFcX7DpRRzodbBRPKcOHY-6Jmwv3SdHuP6BxL0JfKF3CS5RRWaBKKWasqRdvo-dYt3JzN6lLPT1vpzHtlEpMPexmClusHpvrNZLDz_0pOcqy_JPnBMv7xVwxaSXqO9d42GnF9QFPEFUsTS6fQAKNEwY0LV1rnjl6evvhyKaQdnn484wMVPMIsXRCI94n9xSSBqqLdxg6iJYvhwzwlQzEpggy1F17wzBdM6lGqs3w"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-warm-white text-4xl">zoom_in</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Access Section -->
+<section class="py-24 md:py-32 bg-surface" id="staff">
+<div class="max-w-[1200px] mx-auto px-margin-desktop">
+<div class="text-center mb-16">
+<span class="text-muted-gold font-label-md uppercase tracking-widest mb-4 block">Staff</span>
+<h2 class="font-headline-lg text-headline-lg text-primary">スタッフ紹介</h2>
+<div class="w-24 h-[1px] bg-primary/20 mx-auto mt-6"></div>
+</div>
+<div class="grid md:grid-cols-2 gap-12">
+<!-- Stylist 1 -->
+<div class="flex flex-col md:flex-row gap-8 items-center md:items-start group">
+<div class="w-48 h-64 shrink-0 rounded-3xl overflow-hidden shadow-lg transition-transform duration-500 group-hover:scale-105">
+<img alt="Haruka - Owner / Top Stylist" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjGhgnFx_15VBR6NQYWky5gGwAg_1pBTN98kp3duWZpEMveosXFMPFSV-SUwqBgq3z03eRK9LjS8ts_TrUFcNK-uJP_Rpdq7e9ZmRJ9Eup6XfzdrjdvvyURjkKPPQdxOj3S9NwHlD1IG7AtW25Yejc4JjqofhbFOt5aT3vYG1abkkKW2Pv31aYTuMuu5tL4W1Kf5i7yj72tiQx2RLQAmbwP04Q1Necf_U91sYvJIZIurA9xXvM5pidzw"/>
+</div>
+<div class="space-y-4 text-center md:text-left">
+<div>
+<h3 class="font-headline-md text-headline-md text-primary">Haruka</h3>
+<p class="text-muted-gold font-label-md">Owner / Top Stylist</p>
+</div>
+<p class="text-on-surface-variant font-body-md leading-relaxed">一人ひとりの魅力を引き出すスタイルをご提案します。</p>
+</div>
+</div>
+<!-- Stylist 2 -->
+<div class="flex flex-col md:flex-row gap-8 items-center md:items-start group">
+<div class="w-48 h-64 shrink-0 rounded-3xl overflow-hidden shadow-lg transition-transform duration-500 group-hover:scale-105">
+<img alt="Kenji - Art Director" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuUDOFHFynzL8NZ4eSi8hWTdhpq5FGqFMw4B-SOa7s7qyH_xbfjpEFM-0opp_TaxP8iFsuR0rnvP_UCUrJZeAAIdRGR64esSXrhSdy3rQPh4wAQaSmYsfAPDpq5TsXAb4bifnxJg0kEMFuEKGfqt4lN3nmlLJ20YhdnzOLt08_MbCDLNrLVZil7403HfLxnX16WqcRZTWgZxJfAds9mzTKCtlsER8y6kwemhPmi48Y69n0auYHOFPxrw"/>
+</div>
+<div class="space-y-4 text-center md:text-left">
+<div>
+<h3 class="font-headline-md text-headline-md text-primary">Kenji</h3>
+<p class="text-muted-gold font-label-md">Art Director</p>
+</div>
+<p class="text-on-surface-variant font-body-md leading-relaxed">再現性の高いカットと、透明感のあるカラーが得意です。</p>
+</div>
+</div>
+</div>
+</div>
+</section><section class="py-24 md:py-32 bg-surface-container" id="access">
+<div class="max-w-[1200px] mx-auto px-margin-desktop">
+<div class="grid lg:grid-cols-2 gap-16 items-start">
+<div>
+<span class="text-muted-gold font-label-md uppercase tracking-widest mb-4 block">Access</span>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-12">アクセス</h2>
+<div class="space-y-0 divide-y divide-primary/10">
+<div class="flex py-6">
+<span class="w-32 font-label-md text-primary shrink-0">住所</span>
+<div class="text-on-surface-variant font-body-md">
+                                〒000-0000<br/>
+                                東京都○○区○○町1-2-3
+                            </div>
+</div>
+<div class="flex py-6">
+<span class="w-32 font-label-md text-primary shrink-0">最寄駅</span>
+<div class="text-on-surface-variant font-body-md">○○線「○○駅」徒歩5分</div>
+</div>
+<div class="flex py-6">
+<span class="w-32 font-label-md text-primary shrink-0">営業時間</span>
+<div class="text-on-surface-variant font-body-md">
+                                平日 10:00〜20:00<br/>
+                                土日祝 9:00〜19:00
+                            </div>
+</div>
+<div class="flex py-6">
+<span class="w-32 font-label-md text-primary shrink-0">定休日</span>
+<div class="text-on-surface-variant font-body-md">毎週火曜日</div>
+</div>
+<div class="flex py-6">
+<span class="w-32 font-label-md text-primary shrink-0">電話</span>
+<a class="text-primary font-bold hover:underline transition-all" href="tel:00-0000-0000">00-0000-0000</a>
+</div>
+</div>
+</div>
+<div class="h-full min-h-[400px] bg-white rounded-[40px] shadow-lg overflow-hidden border-8 border-white p-2">
+<div class="w-full h-full bg-soft-sand relative flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 grayscale opacity-40 mix-blend-multiply" style="background-image: url('https://www.transparenttextures.com/patterns/cubes.png')"></div>
+<div class="z-10 text-center p-8">
+<span class="material-symbols-outlined text-primary text-5xl mb-4" style="font-variation-settings: 'FILL' 1;">location_on</span>
+<p class="font-headline-md text-primary mb-6">Google マップはこちら</p>
+<a class="inline-block border-2 border-primary text-primary px-8 py-3 rounded-full font-label-md hover:bg-primary hover:text-warm-white transition-all" href="#">地図を表示する</a>
+</div>
+<div class="absolute inset-0 bg-primary/5 pointer-events-none"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Booking Form Section -->
+<section class="py-24 md:py-32 bg-surface" id="contact">
+<div class="max-w-[800px] mx-auto px-margin-desktop">
+<div class="text-center mb-16">
+<span class="text-muted-gold font-label-md uppercase tracking-widest mb-4 block">Contact</span>
+<h2 class="font-headline-lg text-headline-lg text-primary">ご予約・お問い合わせ</h2>
+<p class="text-on-surface-variant mt-4">24時間受け付けております。お気軽にご連絡ください。</p>
+</div>
+<form class="space-y-8 bg-surface-container-lowest p-10 md:p-16 rounded-[40px] shadow-2xl shadow-primary/5 border border-primary/5">
+<div class="grid md:grid-cols-2 gap-8">
+<div class="space-y-2">
+<label class="font-label-md text-primary">お名前 <span class="text-error">*</span></label>
+<input class="w-full bg-soft-sand border-0 border-b-2 border-transparent focus:border-deep-ocean focus:ring-0 rounded-xl px-6 py-4 transition-all outline-none" placeholder="山田 花子" required="" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-md text-primary">メールアドレス <span class="text-error">*</span></label>
+<input class="w-full bg-soft-sand border-0 border-b-2 border-transparent focus:border-deep-ocean focus:ring-0 rounded-xl px-6 py-4 transition-all outline-none" placeholder="example@email.com" required="" type="email"/>
+</div>
+</div>
+<div class="grid md:grid-cols-2 gap-8">
+<div class="space-y-2">
+<label class="font-label-md text-primary">ご希望のメニュー</label>
+<select class="w-full bg-soft-sand border-0 border-b-2 border-transparent focus:border-deep-ocean focus:ring-0 rounded-xl px-6 py-4 transition-all outline-none">
+<option>選択してください</option>
+<option>カット</option>
+<option>カラー</option>
+<option>パーマ</option>
+<option>トリートメント</option>
+<option>その他・複数</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="font-label-md text-primary">ご希望日時</label>
+<input class="w-full bg-soft-sand border-0 border-b-2 border-transparent focus:border-deep-ocean focus:ring-0 rounded-xl px-6 py-4 transition-all outline-none" type="datetime-local"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-label-md text-primary">ご要望・ご質問</label>
+<textarea class="w-full bg-soft-sand border-0 border-b-2 border-transparent focus:border-deep-ocean focus:ring-0 rounded-xl px-6 py-4 transition-all outline-none" placeholder="ご自由にお書きください" rows="4"></textarea>
+</div>
+<div class="text-center pt-6">
+<button class="w-full md:w-auto bg-deep-ocean text-warm-white px-16 py-5 rounded-full font-label-md text-label-md shadow-xl hover:shadow-2xl hover:bg-primary-container transition-all active:scale-95 transform hover:-translate-y-1" type="submit">
+                        送信する
+                    </button>
+<p class="mt-6 text-sm text-on-surface-variant italic hidden" id="form-success">ありがとうございます！確認後、ご連絡いたします。</p>
+</div>
+</form>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface-container dark:bg-surface-container-high w-full py-16">
+<div class="max-w-[1200px] mx-auto px-margin-desktop flex flex-col md:flex-row justify-between items-start gap-gutter">
+<div class="flex flex-col gap-6">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-3xl">spa</span>
+<span class="font-headline-md text-headline-md text-primary dark:text-inverse-primary">Luana</span>
+</div>
+<p class="text-on-surface-variant max-w-xs font-body-md text-body-md">
+                    ハワイの穏やかな風のように、<br/>
+                    あなたに心地よい時間をお届けします。
+                </p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-12 md:gap-24">
+<div class="space-y-4">
+<h4 class="font-label-md text-primary tracking-widest uppercase">Quick Links</h4>
+<ul class="space-y-2">
+<li><a class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-200 hover:underline decoration-soft-sand" href="#about">About</a></li>
+<li><a class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-200 hover:underline decoration-soft-sand" href="#services">Services</a></li>
+<li><a class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-200 hover:underline decoration-soft-sand" href="#gallery">Gallery</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="font-label-md text-primary tracking-widest uppercase">Support</h4>
+<ul class="space-y-2">
+<li><a class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-200 hover:underline decoration-soft-sand" href="#access">Access</a></li>
+<li><a class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-200 hover:underline decoration-soft-sand" href="#contact">Contact</a></li>
+<li><a class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-200 hover:underline decoration-soft-sand" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+<div class="space-y-4 hidden md:block">
+<h4 class="font-label-md text-primary tracking-widest uppercase">Follow Us</h4>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-primary/5 flex items-center justify-center text-primary hover:bg-primary hover:text-warm-white transition-all" href="#">
+<span class="material-symbols-outlined">camera</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-primary/5 flex items-center justify-center text-primary hover:bg-primary hover:text-warm-white transition-all" href="#">
+<span class="material-symbols-outlined">public</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="max-w-[1200px] mx-auto px-margin-desktop mt-16 pt-8 border-t border-primary/10">
+<p class="text-on-surface-variant/60 font-body-md text-sm text-center md:text-left">
+                © 2024 Luana High-End Salon. All rights reserved.
+            </p>
+</div>
+</footer>
+<!-- FAB for quick booking (Sticky) -->
+<a class="md:hidden fixed bottom-6 right-6 z-50 bg-primary text-warm-white p-4 rounded-full shadow-2xl active:scale-95 transition-transform flex items-center justify-center" href="#contact">
+<span class="material-symbols-outlined">calendar_today</span>
+</a>
+<script>
+        // Scroll reveal — hero section excluded to prevent flicker
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
 
-  <!-- Navigation -->
-  <nav class="nav">
-    <div class="nav__inner">
-      <a class="nav__logo" href="#hero">Luana</a>
-      <ul class="nav__links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#access">Access</a></li>
-        <li><a href="#contact" class="btn btn--nav">予約する</a></li>
-      </ul>
-      <button class="nav__hamburger" aria-label="メニューを開く">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </nav>
+        document.querySelectorAll('section').forEach(section => {
+            if (section.querySelector('.hero-gradient')) return;
+            section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+            revealObserver.observe(section);
+        });
 
-  <!-- Hero -->
-  <section class="hero" id="hero">
-    <div class="hero__overlay"></div>
-    <div class="hero__content">
-      <p class="hero__sub">HAIR SALON</p>
-      <h1 class="hero__title">Luana</h1>
-      <p class="hero__tagline">ハワイ語で「リラックスする」<br>心も髪も、解き放たれる時間を。</p>
-      <a href="#contact" class="btn btn--primary">ご予約はこちら</a>
-    </div>
-    <div class="hero__wave">
-      <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#ffffff"/>
-      </svg>
-    </div>
-  </section>
+        // Sticky Header
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.classList.add('py-2', 'shadow-md');
+                header.classList.remove('py-4', 'shadow-sm');
+            } else {
+                header.classList.add('py-4', 'shadow-sm');
+                header.classList.remove('py-2', 'shadow-md');
+            }
+        });
 
-  <!-- About -->
-  <section class="section about" id="about">
-    <div class="container">
-      <span class="section__label">About</span>
-      <h2 class="section__title">ようこそ、Luanaへ</h2>
-      <div class="about__grid">
-        <div class="about__text">
-          <p>Hair Salon Luanaは、ハワイ語で「リラックスする」を意味する名を冠したヘアサロンです。</p>
-          <p>施術中はもちろん、来店の瞬間から帰るまで、心からくつろいでいただける空間づくりを大切にしています。</p>
-          <p>一人ひとりのライフスタイルや骨格に合わせたデザインで、あなたの魅力を最大限に引き出します。</p>
-        </div>
-        <div class="about__values">
-          <div class="value-card">
-            <div class="value-card__icon">🌺</div>
-            <h3>Relax</h3>
-            <p>ハワイの穏やかな空気感をイメージした、リラックスできる空間</p>
-          </div>
-          <div class="value-card">
-            <div class="value-card__icon">✂️</div>
-            <h3>Skill</h3>
-            <p>経験豊富なスタイリストによる、丁寧で確かな技術</p>
-          </div>
-          <div class="value-card">
-            <div class="value-card__icon">💛</div>
-            <h3>Care</h3>
-            <p>髪と頭皮を労わる厳選されたオーガニックケア用品</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+        // Hamburger menu
+        const hamburger = document.querySelector('button.md\\:hidden');
+        const mobileNav = document.querySelector('nav');
+        if (hamburger && mobileNav) {
+            let menuOpen = false;
+            hamburger.addEventListener('click', () => {
+                menuOpen = !menuOpen;
+                if (menuOpen) {
+                    mobileNav.classList.remove('hidden');
+                    mobileNav.classList.add('flex', 'flex-col', 'absolute', 'top-16', 'left-0', 'right-0', 'bg-surface', 'px-8', 'py-6', 'shadow-lg', 'z-40', 'gap-4');
+                    mobileNav.classList.remove('md:flex', 'items-center', 'gap-8');
+                } else {
+                    mobileNav.classList.add('hidden');
+                    mobileNav.classList.remove('flex', 'flex-col', 'absolute', 'top-16', 'left-0', 'right-0', 'bg-surface', 'px-8', 'py-6', 'shadow-lg', 'z-40', 'gap-4');
+                }
+            });
+            mobileNav.querySelectorAll('a').forEach(a => {
+                a.addEventListener('click', () => {
+                    menuOpen = false;
+                    mobileNav.classList.add('hidden');
+                    mobileNav.classList.remove('flex', 'flex-col', 'absolute', 'top-16', 'left-0', 'right-0', 'bg-surface', 'px-8', 'py-6', 'shadow-lg', 'z-40', 'gap-4');
+                });
+            });
+        }
 
-  <!-- Services -->
-  <section class="section services" id="services">
-    <div class="container">
-      <span class="section__label">Services</span>
-      <h2 class="section__title">メニュー</h2>
-      <div class="services__grid">
-        <div class="service-card">
-          <div class="service-card__img service-card__img--cut"></div>
-          <div class="service-card__body">
-            <h3>カット</h3>
-            <p>骨格・髪質・ライフスタイルに合わせたオーダーメイドスタイル。</p>
-            <p class="service-card__price">¥5,500〜</p>
-          </div>
-        </div>
-        <div class="service-card">
-          <div class="service-card__img service-card__img--color"></div>
-          <div class="service-card__body">
-            <h3>カラー</h3>
-            <p>髪に優しい低ダメージカラーで、あなただけの色を表現。</p>
-            <p class="service-card__price">¥8,800〜</p>
-          </div>
-        </div>
-        <div class="service-card">
-          <div class="service-card__img service-card__img--perm"></div>
-          <div class="service-card__body">
-            <h3>パーマ</h3>
-            <p>ナチュラルウェーブからしっかりカールまで幅広く対応。</p>
-            <p class="service-card__price">¥11,000〜</p>
-          </div>
-        </div>
-        <div class="service-card">
-          <div class="service-card__img service-card__img--treatment"></div>
-          <div class="service-card__body">
-            <h3>トリートメント</h3>
-            <p>ダメージを補修し、ツヤと潤いを取り戻すケアメニュー。</p>
-            <p class="service-card__price">¥4,400〜</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Gallery -->
-  <section class="section gallery" id="gallery">
-    <div class="container">
-      <span class="section__label">Gallery</span>
-      <h2 class="section__title">スタイルギャラリー</h2>
-      <div class="gallery__grid">
-        <div class="gallery__item gallery__item--1"></div>
-        <div class="gallery__item gallery__item--2"></div>
-        <div class="gallery__item gallery__item--3"></div>
-        <div class="gallery__item gallery__item--4"></div>
-        <div class="gallery__item gallery__item--5"></div>
-        <div class="gallery__item gallery__item--6"></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Access -->
-  <section class="section access" id="access">
-    <div class="container">
-      <span class="section__label">Access</span>
-      <h2 class="section__title">アクセス</h2>
-      <div class="access__grid">
-        <div class="access__info">
-          <table class="access__table">
-            <tr>
-              <th>住所</th>
-              <td>〒000-0000<br>東京都○○区○○町1-2-3</td>
-            </tr>
-            <tr>
-              <th>最寄駅</th>
-              <td>○○線「○○駅」徒歩5分</td>
-            </tr>
-            <tr>
-              <th>営業時間</th>
-              <td>
-                平日 10:00〜20:00<br>
-                土日祝 9:00〜19:00
-              </td>
-            </tr>
-            <tr>
-              <th>定休日</th>
-              <td>毎週火曜日</td>
-            </tr>
-            <tr>
-              <th>電話</th>
-              <td><a href="tel:00-0000-0000">00-0000-0000</a></td>
-            </tr>
-          </table>
-        </div>
-        <div class="access__map">
-          <div class="map-placeholder">
-            <span>📍 Google マップはこちら</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section class="section contact" id="contact">
-    <div class="container">
-      <span class="section__label">Contact</span>
-      <h2 class="section__title">ご予約・お問い合わせ</h2>
-      <form class="contact__form" onsubmit="handleSubmit(event)">
-        <div class="form-group">
-          <label for="name">お名前 <span class="required">*</span></label>
-          <input type="text" id="name" name="name" placeholder="山田 花子" required />
-        </div>
-        <div class="form-group">
-          <label for="email">メールアドレス <span class="required">*</span></label>
-          <input type="email" id="email" name="email" placeholder="example@email.com" required />
-        </div>
-        <div class="form-group">
-          <label for="menu">ご希望のメニュー</label>
-          <select id="menu" name="menu">
-            <option value="">選択してください</option>
-            <option value="cut">カット</option>
-            <option value="color">カラー</option>
-            <option value="perm">パーマ</option>
-            <option value="treatment">トリートメント</option>
-            <option value="other">その他・複数</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="date">ご希望日時</label>
-          <input type="datetime-local" id="date" name="date" />
-        </div>
-        <div class="form-group">
-          <label for="message">ご要望・ご質問</label>
-          <textarea id="message" name="message" rows="4" placeholder="ご自由にお書きください"></textarea>
-        </div>
-        <button type="submit" class="btn btn--primary btn--full">送信する</button>
-        <p id="form-success" class="form-success" hidden>ありがとうございます！確認後、ご連絡いたします。</p>
-      </form>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <p class="footer__logo">Luana</p>
-      <p class="footer__copy">© 2026 Hair Salon Luana. All rights reserved.</p>
-    </div>
-  </footer>
-
-  <script src="main.js"></script>
-</body>
-</html>
+        // Form submission
+        const form = document.querySelector('form');
+        if (form) {
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const btn = form.querySelector('button[type="submit"]');
+                btn.textContent = '送信中…';
+                btn.disabled = true;
+                setTimeout(() => {
+                    document.getElementById('form-success').classList.remove('hidden');
+                    form.reset();
+                    btn.textContent = '送信する';
+                    btn.disabled = false;
+                }, 1200);
+            });
+        }
+    </script>
+</body></html>
